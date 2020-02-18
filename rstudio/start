@@ -15,6 +15,11 @@ printenv >> ~/.Renviron
 mkdir -p ~/.rstudio/monitored/user-settings/
 echo -e "initialWorkingDirectory=\"${DRT_WORKING_DIR:-"${DOMINO_WORKING_DIR}"}\"\n" >> ~/.rstudio/monitored/user-settings/user-settings
 #echo "uiPrefs=\"{\n    \"terminal_websockets\" : false}\"" >> ~/.rstudio/monitored/user-settings/user-settings
-echo 'uiPrefs=\"{\"terminal_websockets\":false}\"' >> ~/.rstudio/monitored/user-settings/user-settings
+#echo 'uiPrefs=\"{\"terminal_websockets\":false}\"' >> ~/.rstudio/monitored/user-settings/user-settings
+##uiPrefs="\\\"{\\\"terminal_websockets\\\":false}\\\""
+echo "Jaclyn's"
+echo "uiPrefs=\"{'terminal_websockets':false}\"" >> ~/.rstudio/monitored/user-settings/user-settings
+echo "Akshay's (incorrect)"
+echo "uiPrefs=\"{\"terminal_websockets\":false}\"" >> ~/.rstudio/monitored/user-settings/user-settings
 
 /usr/lib/rstudio-server/bin/rserver --www-port=8888 --auth-none=1 --server-app-armor-enabled=0
